@@ -1,3 +1,6 @@
+package authentication;
+
+import resources.User;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,11 +20,11 @@ public class LoginAuthenticator {
             for(User user : baseOfUsers) {
                 if(user.getLogin().equals(login) && user.getPassword().equals(password)) {
                     user.setIsLoggedIn(true);
-                    System.out.println("User " + user.getFirstName() + " " + user.getLastName() + " is logged in");
+                    System.out.println("resources.User " + user.getFirstName() + " " + user.getLastName() + " is logged in");
                     return true;
                 }
             }
-            System.out.println("User with login " + login + " and password " + password + " is not found");
+            System.out.println("resources.User with login " + login + " and password " + password + " is not found");
             return false;
         }
 }

@@ -1,3 +1,5 @@
+package resources;
+
 import java.util.ArrayList;
 
 public class User {
@@ -40,11 +42,11 @@ public class User {
         return email;
     }
 
-    protected String getLogin() {
+    public String getLogin() {
         return login;
     }
 
-    protected String getPassword() {
+    public String getPassword() {
         return password;
     }
 
@@ -52,7 +54,7 @@ public class User {
         return isLoggedIn;
     }
 
-    protected void setIsLoggedIn(boolean isLoggedIn) {
+    public void setIsLoggedIn(boolean isLoggedIn) {
         this.isLoggedIn = isLoggedIn;
     }
 
@@ -62,7 +64,7 @@ public class User {
 
         public Users() {
             users.add(new User("John", "Smith", "1234 Main St.",
-                    "1234567890", "john.smith@gmail.com", "johnsmith", "password"));
+                    "1234567890", "john.smith@gmail.com", "admin", "admin"));
             users.add(new User("Jane", "Doe", "1234 Main St.",
                     "1234567890", "jane.doe@gmail.com", "janedoe", "password"));
             users.add(new User("Bob", "Smith", "1234 Main St.",
@@ -75,6 +77,7 @@ public class User {
                     "1234567890", "jennifer.doe@gmail.com", "jenniferdoe", "password"));
             users.add(new User("Michael", "Smith", "1234 Main St.",
                     "1234567890", "michael.smith@gmail.com", "michaelsmith", "password"));
+
         }
 
         public ArrayList<User> getUsers() {

@@ -1,1 +1,1 @@
-Dawid	Podsiadlo	Krakow ul.gejowa 3	183390593	dawid@debil.student	admin1	admin1
+Dawid	Podsiadlo	Krakow ul.Lipowa 3	183390593	dawid@gmail.com	admin1	admin1

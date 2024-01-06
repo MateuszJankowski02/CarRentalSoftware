@@ -1,0 +1,1 @@
+Audi	A4	Black	123	123	123	2004	2.0	yes	Diesel	100000	20zł

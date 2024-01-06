@@ -1,8 +1,12 @@
 package resources;
 
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 
-public class User {
+public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String address;
@@ -20,6 +24,24 @@ public class User {
         this.email = email;
         this.login = login;
         this.password = password;
+    }
+
+    private static void serializeUser(Object object, String fileName) {
+        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName))) {
+            outputStream.writeObject(object);
+            System.out.println("Object serialized and saved to " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static Object deserializeUser(String fileName) {
+        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName))) {
+            return inputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public String getFirstName() {
@@ -58,30 +80,48 @@ public class User {
         this.isLoggedIn = isLoggedIn;
     }
 
-    public static class Users {
+    public static class Users {     // KLASA WEWNĘTRZNA
 
-        private ArrayList<User> users = new ArrayList<>();
+        private static ArrayList<User> users = new ArrayList<>();
 
-        public Users() {
-            users.add(new User("John", "Smith", "1234 Main St.",
-                    "1234567890", "john.smith@gmail.com", "admin", "admin"));
-            users.add(new User("Jane", "Doe", "1234 Main St.",
-                    "1234567890", "jane.doe@gmail.com", "janedoe", "password"));
-            users.add(new User("Bob", "Smith", "1234 Main St.",
-                    "1234567890", "bob.smith@gmail.com", "bobsmith", "password"));
-            users.add(new User("Mary", "Doe", "1234 Main St.",
-                    "1234567890", "mary.doe@gmail.com", "marydoe", "password"));
-            users.add(new User("James", "Smith", "1234 Main St.",
-                    "1234567890", "james.smith@gmail.com", "jamessmith", "password"));
-            users.add(new User("Jennifer", "Doe", "1234 Main St.",
-                    "1234567890", "jennifer.doe@gmail.com", "jenniferdoe", "password"));
-            users.add(new User("Michael", "Smith", "1234 Main St.",
-                    "1234567890", "michael.smith@gmail.com", "michaelsmith", "password"));
-
+        public static ArrayList<User> readUsersFromFile(String fileName) {
+            try {
+                File file = new File(fileName);
+                Scanner scanner = new Scanner(file);
+                while (scanner.hasNextLine()) {
+                    String[] user = scanner.nextLine().split("\t");
+                    //System.out.println(user[0] + " " + user[1] + " " + user[2] + " " + user[3] + " " + user[4] + " " + user[5] + " " + user[6]);
+                    users.add(new User(user[0], user[1], user[2], user[3], user[4], user[5], user[6]));
+                }
+                scanner.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            return users;
         }
 
-        public ArrayList<User> getUsers() {
+        public static boolean saveUsersToFile(String fileName) {
+            try {
+                FileWriter fileWriter = new FileWriter(fileName);
+                for (User user : users) {
+                    fileWriter.write(user.getFirstName() + "\t" + user.getLastName() + "\t" + user.getAddress() + "\t" + user.getPhoneNumber() + "\t" + user.getEmail() + "\t" + user.getLogin() + "\t" + user.getPassword() + "\n");
+                }
+                fileWriter.close();
+                return true;
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }
+
+        public static ArrayList<User> getUsers() {
             return users;
+        }
+
+        public static void displayUsers() {
+            for (User user : users) {
+                System.out.println(user.getFirstName() + " " + user.getLastName() + " " + user.getAddress() + " " + user.getPhoneNumber() + " " + user.getEmail() + " " + user.getLogin() + " " + user.getPassword());
+            }
         }
 
     }

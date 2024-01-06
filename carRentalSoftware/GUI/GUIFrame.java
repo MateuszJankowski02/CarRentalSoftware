@@ -2,6 +2,7 @@ package GUI;
 
 import authentication.LoginAuthenticator;
 import resources.User;
+import resources.Client;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,7 +15,9 @@ public class GUIFrame extends JFrame {
     CardLayout cardLayout = new CardLayout();
     LoginPanel loginPanel = new LoginPanel();
     Menu menu = new Menu();
-    AddCar addCar = new AddCar();
+    RemoveCar removeCar = new RemoveCar(menu);
+    AddCar addCar = new AddCar(removeCar);
+
     static int FrameWidth = 1080;
     static int FrameHeight = 720;
     static private String userLogin;
@@ -30,12 +33,6 @@ public class GUIFrame extends JFrame {
         JPanel loginSwitch = new JPanel(cardLayout);
         JPanel contentSwitch = new JPanel(cardLayout);
         JPanel blankPage = new JPanel();
-        JPanel downloadClientList = new JPanel();
-
-        JLabel downloadClientListLabelSuccess = new JLabel("Client list downloaded to file clients.txt");
-        JLabel downloadClientListLabelFail = new JLabel("Could not download client list");
-
-        downloadClientList.setLayout(new GridLayout());
 
         JSplitPane menuSplit = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, menu, contentSwitch);
         menuSplit.setDividerLocation(FrameWidth/5);
@@ -45,8 +42,8 @@ public class GUIFrame extends JFrame {
         loginSwitch.add(menuSplit, "menuSplit");
 
         contentSwitch.add(blankPage, "blankPage");
-        contentSwitch.add(downloadClientList, "downloadClientList");
         contentSwitch.add(addCar, "addCar");
+        contentSwitch.add(removeCar, "removeCar");
 
 
 
@@ -67,6 +64,8 @@ public class GUIFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(loginAuthenticator.logout(userLogin, userPassword)){
+                    repaint();
+                    revalidate();
                     loginPanel.loginField.setText("");
                     loginPanel.passwordField.setText("");
                     cardLayout.show(loginSwitch, "login");
@@ -77,21 +76,30 @@ public class GUIFrame extends JFrame {
         menu.addCarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                repaint();
+                revalidate();
                 cardLayout.show(contentSwitch, "addCar");
+            }
+        });
+
+        menu.removeCarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                repaint();
+                revalidate();
+                cardLayout.show(contentSwitch, "removeCar");
             }
         });
 
         menu.downloadClientListButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (User.Users.saveUsersToFile("clients.txt")) {
-                    downloadClientList.remove(downloadClientListLabelFail);
-                    downloadClientList.add(downloadClientListLabelSuccess);
-                    cardLayout.show(contentSwitch, "downloadClientList");
+                repaint();
+                revalidate();
+                if (Client.Clients.downloadClients("clients.txt")) {
+                    JOptionPane.showMessageDialog(null, "Client list downloaded to file clients.txt");
                 } else {
-                    downloadClientList.remove(downloadClientListLabelSuccess);
-                    downloadClientList.add(downloadClientListLabelFail);
-                    cardLayout.show(contentSwitch, "downloadClientList");
+                    JOptionPane.showMessageDialog(null, "Could not download client list");
                 }
             }
         });
@@ -113,5 +121,13 @@ public class GUIFrame extends JFrame {
 
     public static int getFrameWidth() {
         return FrameWidth;
+    }
+
+    public static void labelInset(GridBagConstraints constraints){
+        constraints.insets = new Insets(0, 20, 0, 20);
+    }
+
+    public static void defaultInset(GridBagConstraints constraints){
+        constraints.insets = new Insets(20, 20, 20, 20);
     }
 }

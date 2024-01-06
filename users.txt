@@ -3,4 +3,3 @@ Jan,Nowak,Warszawa ul.Wiejska 44,125478369,jan@gmail.com,pracownik2,pracownik2
 Magda,Kowalczyk,Krakow ul.Nowa 21,375428888,magda@gmail.com,pracownik3,pracownik3
 Anna,Kaczor,Gdansk ul.Morska 15,987654321,anna@gmail.com,pracownik4,pracownik4
 Dariusz,Wisniewski,Gdansk ul.Morska 7,654321987,dariusz@gmail.com,pracownik5,pracownik5
-

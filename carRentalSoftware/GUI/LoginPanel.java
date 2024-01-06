@@ -36,34 +36,30 @@ public class LoginPanel extends JPanel{
         constraints.gridwidth = 2;
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.anchor = GridBagConstraints.CENTER;
-        labelInset(constraints);
+        GUIFrame.labelInset(constraints);
         add(loginLabel, constraints);
 
-        defaultInset(constraints);
+        GUIFrame.defaultInset(constraints);
         constraints.gridy++;
         add(loginField, constraints);
 
-        labelInset(constraints);
+        GUIFrame.labelInset(constraints);
         constraints.gridy++;
         add(passwordLabel, constraints);
 
-        defaultInset(constraints);
+        GUIFrame.defaultInset(constraints);
         constraints.gridy++;
         add(passwordField, constraints);
 
         constraints.gridy++;
         add(loginButton, constraints);
 
+        // testing purposes
+        passwordField.setText("pracownik1");
+        loginField.setText("pracownik1");
+
         setBorder(new EmptyBorder(80, 80, 80, 80));
 
-    }
-
-    public void labelInset (GridBagConstraints constraints){
-        constraints.insets = new Insets(10, 30, 0, 30);
-    }
-
-    public void defaultInset (GridBagConstraints constraints){
-        constraints.insets = new Insets(10, 30, 30, 30);
     }
 
 }

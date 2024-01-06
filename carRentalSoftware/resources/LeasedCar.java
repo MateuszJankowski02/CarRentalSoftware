@@ -14,7 +14,7 @@ public class LeasedCar extends NotLeasedCar{
         super(notLeasedCar.getBrand(), notLeasedCar.getModel(), notLeasedCar.getColor(), notLeasedCar.getRegistrationNumber(),
                 notLeasedCar.getVinNumber(), notLeasedCar.getEngineNumber(), notLeasedCar.getProductionYear(),
                 notLeasedCar.getEngineCapacity(), notLeasedCar.getPower(), notLeasedCar.getFuelType(),
-                notLeasedCar.getMileage(), notLeasedCar.getPrice());
+                notLeasedCar.getMileage());
         this.carLeaser = carLeaser;
         this.leaseStartDate = leaseStartDate;
         this.leaseEndDate = leaseEndDate;

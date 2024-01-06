@@ -25,9 +25,9 @@ public class Client {
         this.identityVerificator = identityVerificator;
     }
 
-    class Clients{
+    public class Clients{
 
-        private ArrayList<Client> clients = new ArrayList<>();
+        private static ArrayList<Client> clients = new ArrayList<>();
 
         public void addClient(Client client){
             clients.add(client);
@@ -37,12 +37,12 @@ public class Client {
             clients.remove(client);
         }
 
-        public void uploadClients(){
+        public void uploadClients(String fileName){
             try {
-                File file = new File("clients.txt");
+                File file = new File(fileName);
                 Scanner scanner = new Scanner(file);
                 while (scanner.hasNextLine()) {
-                    String[] clientData = scanner.nextLine().split("\t");
+                    String[] clientData = scanner.nextLine().split(",");
                     clients.add(new Client(clientData[0], clientData[1], clientData[2], clientData[3], clientData[4], clientData[5]));
                 }
             } catch (FileNotFoundException e) {
@@ -50,15 +50,17 @@ public class Client {
             }
         }
 
-        public void downloadClients(){
+        public static boolean downloadClients(String fileName){
             try {
-                FileWriter fileWriter = new FileWriter("clients.txt");
+                FileWriter fileWriter = new FileWriter(fileName);
                 for (Client client : clients) {
-                    fileWriter.write(client.getFirstName() + "\t" + client.getLastName() + "\t" + client.getAddress() + "\t" + client.getPhoneNumber() + "\t" + client.getEmail() + "\t" + client.getIdentityVerificator() + "\n");
+                    fileWriter.write(client.getFirstName() + "," + client.getLastName() + "," + client.getAddress() + "," + client.getPhoneNumber() + "," + client.getEmail() + "," + client.getIdentityVerificator() + "\n");
                 }
                 fileWriter.close();
+                return true;
             } catch (IOException e) {
                 e.printStackTrace();
+                return false;
             }
         }
         public void showClients(){

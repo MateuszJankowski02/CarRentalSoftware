@@ -89,7 +89,7 @@ public class User implements Serializable {
                 File file = new File(fileName);
                 Scanner scanner = new Scanner(file);
                 while (scanner.hasNextLine()) {
-                    String[] user = scanner.nextLine().split("\t");
+                    String[] user = scanner.nextLine().split(",");
                     //System.out.println(user[0] + " " + user[1] + " " + user[2] + " " + user[3] + " " + user[4] + " " + user[5] + " " + user[6]);
                     users.add(new User(user[0], user[1], user[2], user[3], user[4], user[5], user[6]));
                 }
@@ -104,7 +104,7 @@ public class User implements Serializable {
             try {
                 FileWriter fileWriter = new FileWriter(fileName);
                 for (User user : users) {
-                    fileWriter.write(user.getFirstName() + "\t" + user.getLastName() + "\t" + user.getAddress() + "\t" + user.getPhoneNumber() + "\t" + user.getEmail() + "\t" + user.getLogin() + "\t" + user.getPassword() + "\n");
+                    fileWriter.write(user.getFirstName() + "," + user.getLastName() + "," + user.getAddress() + "," + user.getPhoneNumber() + "," + user.getEmail() + "," + user.getLogin() + "," + user.getPassword() + "\n");
                 }
                 fileWriter.close();
                 return true;

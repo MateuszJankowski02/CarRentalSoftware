@@ -8,6 +8,7 @@ public class Main {
         LeasedCar.LeasedCars leasedCars = new LeasedCar.LeasedCars();
         User.Users.readUsersFromFile("users.txt");
         System.out.println("------------------------------------------------------------------------------------------------------------------------");
+        NotLeasedCar.NotLeasedCars.displayNotLeasedCars();
 
         new GUIFrame(User.Users.getUsers());
     }

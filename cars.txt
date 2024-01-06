@@ -1,1 +1,10 @@
-Audi	A4	Black	123	123	123	2004	2.0	yes	Diesel	100000	20zł
+Audi A4 Black	123	123	123	2004 2.0 170 Diesel 100000 20zł
+AlfaRomeo Giulietta Red KBC98368 1234567890 199064 2011 1.75 235 Gasoline 300000 300zł
+Honda Civic Silver KR42069 HGF1234567890 D16A4 2003 1.7 140 Gasoline 200000 200zł
+BMW X3 White 456 456 456 2018 2.5 190 Petrol 80000 25zł
+Mercedes C-Class Blue 789 789 789 2015 2.2 220 Diesel 120000 30zł
+Volkswagen Passat Gray 101 101 101 2016 1.8 76 Petrol 90000 22zł
+Ford Fiesta Yellow 202 202 202 2012 1.4 130 Petrol 150000 18zł
+Toyota Camry Black 303 303 303 2019 2.0 140 Hybrid 60000 35zł
+Nissan Altima Green 404 404 404 2014 2.5 180 Petrol 100000 28zł
+Hyundai Elantra Orange 505 505 505 2017 1.6 163 Petrol 110000 24zł

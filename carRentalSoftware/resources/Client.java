@@ -15,6 +15,7 @@ public class Client {
     private String email;
     private String identityVerificator;
     private boolean hasLeasedCar = false;
+    private NotLeasedCar leasedCar;
 
     public Client(String firstName, String lastName, String address, String phoneNumber, String email, String identityVerificator) {
         this.firstName = firstName;
@@ -25,19 +26,19 @@ public class Client {
         this.identityVerificator = identityVerificator;
     }
 
-    public class Clients{
+    public static class Clients{
 
         private static ArrayList<Client> clients = new ArrayList<>();
 
-        public void addClient(Client client){
-            clients.add(client);
+        public static boolean addClient(Client client){
+            return clients.add(client);
         }
 
-        public void removeClient(Client client){
+        public static void removeClient(Client client){
             clients.remove(client);
         }
 
-        public void uploadClients(String fileName){
+        public static void readClientsFromFile(String fileName){
             try {
                 File file = new File(fileName);
                 Scanner scanner = new Scanner(file);
@@ -69,6 +70,10 @@ public class Client {
             }
         }
 
+        public static ArrayList<Client> getClients() {
+            return clients;
+        }
+
     }
 
     public String getFirstName() {
@@ -95,7 +100,16 @@ public class Client {
         return identityVerificator;
     }
 
-    public boolean isHasLeasedCar() {
+    public void leaseCar (NotLeasedCar leasedCar) {
+        this.leasedCar = leasedCar;
+        hasLeasedCar = true;
+    }
+
+    public boolean hasLeasedCar() {
         return hasLeasedCar;
+    }
+
+    public NotLeasedCar getLeasedCar() {
+        return leasedCar;
     }
 }

@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class User implements Serializable {
+public class User implements Serializable{
     private String firstName;
     private String lastName;
     private String address;
@@ -24,24 +24,6 @@ public class User implements Serializable {
         this.email = email;
         this.login = login;
         this.password = password;
-    }
-
-    private static void serializeUser(Object object, String fileName) {
-        try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName))) {
-            outputStream.writeObject(object);
-            System.out.println("Object serialized and saved to " + fileName);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private static Object deserializeUser(String fileName) {
-        try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName))) {
-            return inputStream.readObject();
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     public String getFirstName() {
@@ -80,7 +62,7 @@ public class User implements Serializable {
         this.isLoggedIn = isLoggedIn;
     }
 
-    public static class Users {     // KLASA WEWNĘTRZNA
+    public static class Users{     // KLASA WEWNĘTRZNA
 
         private static ArrayList<User> users = new ArrayList<>();
 
@@ -111,6 +93,26 @@ public class User implements Serializable {
             } catch (IOException e) {
                 e.printStackTrace();
                 return false;
+            }
+        }
+
+        public static boolean serializeUsers(Object object, String fileName) {
+            try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(fileName))) {
+                outputStream.writeObject(object);
+                System.out.println("Object serialized and saved to " + fileName);
+                return true;
+            } catch (IOException e) {
+                e.printStackTrace();
+                return false;
+            }
+        }
+
+        public static Object deserializeUsers(String fileName) {
+            try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream(fileName))) {
+                return inputStream.readObject();
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+                return null;
             }
         }
 

@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         NotLeasedCar.NotLeasedCars.readNotLeasedCarsFromFile("cars.txt");
-        LeasedCar.LeasedCars leasedCars = new LeasedCar.LeasedCars();
+        Client.Clients.readClientsFromFile("clients.txt");
         User.Users.readUsersFromFile("users.txt");
         System.out.println("------------------------------------------------------------------------------------------------------------------------");
         NotLeasedCar.NotLeasedCars.displayNotLeasedCars();

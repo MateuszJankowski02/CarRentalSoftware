@@ -1,0 +1,232 @@
+Sun Jan 07 18:09:16 CET 2024: User pracownik1 logged in
+Sun Jan 07 18:09:24 CET 2024: Client list downloaded to file clientsList.txt
+Sun Jan 07 18:09:26 CET 2024: ClientKrzysztof Kowalczyk has been removed
+Sun Jan 07 18:09:27 CET 2024: ClientBarbara Wiśniewska has been removed
+Sun Jan 07 18:09:27 CET 2024: ClientAndrzej Nowak has been removed
+Sun Jan 07 18:09:28 CET 2024: User list serialized to file usersList.txt
+Sun Jan 07 18:09:35 CET 2024: Car 123 123 1231 added
+Thu Jan 11 15:12:02 CET 2024: User pracownik1 logged in
+Thu Jan 11 15:12:21 CET 2024: ClientAnna Jankowska has been removed
+Thu Jan 11 15:12:23 CET 2024: ClientPiotr Gryf has been removed
+Thu Jan 11 15:12:30 CET 2024: User list serialized to file usersList.txt
+Thu Jan 11 15:12:34 CET 2024: User pracownik1 logged out
+Thu Jan 11 15:12:47 CET 2024: User pracownik2 logged in
+Thu Jan 11 15:12:56 CET 2024: Car 123 123 123 added
+Thu Jan 11 15:13:02 CET 2024: User pracownik2 logged out
+Thu Jan 11 15:15:44 CET 2024: User pracownik1 logged in
+Thu Jan 11 15:16:02 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 15:16:05 CET 2024: User list serialized to file usersList.txt
+Thu Jan 11 15:40:22 CET 2024: User pracownik1 logged in
+Thu Jan 11 15:42:06 CET 2024: User pracownik1 logged in
+Thu Jan 11 15:42:13 CET 2024: Car    added
+Thu Jan 11 15:42:20 CET 2024: Car    added
+Thu Jan 11 15:42:21 CET 2024: Car    added
+Thu Jan 11 15:46:11 CET 2024: User pracownik1 logged in
+Thu Jan 11 15:46:16 CET 2024: Car    added
+Thu Jan 11 15:46:44 CET 2024: User pracownik1 logged in
+Thu Jan 11 15:48:04 CET 2024: User pracownik1 logged in
+Thu Jan 11 15:48:22 CET 2024: Car asd asd asd added
+Thu Jan 11 16:07:06 CET 2024: User pracownik1 logged in
+Thu Jan 11 16:07:12 CET 2024: Client Dawid Podsiadlo has been removed
+Thu Jan 11 16:07:12 CET 2024: Client Ewa Nowak has been removed
+Thu Jan 11 16:07:15 CET 2024: Client Janina Kowalska has been removed
+Thu Jan 11 16:07:16 CET 2024: Client Barbara Wiśniewska has been removed
+Thu Jan 11 16:07:16 CET 2024: Client Krzysztof Kowalczyk has been removed
+Thu Jan 11 16:07:17 CET 2024: Client Zofia Lewandowska has been removed
+Thu Jan 11 16:07:17 CET 2024: Client Piotr Konsik has been removed
+Thu Jan 11 16:07:17 CET 2024: Client Anna Jankowska has been removed
+Thu Jan 11 16:07:18 CET 2024: Client Piotr Gryf has been removed
+Thu Jan 11 16:07:18 CET 2024: Client Teresa Adamczyk has been removed
+Thu Jan 11 16:07:18 CET 2024: Client Tomasz Wojciechowski has been removed
+Thu Jan 11 16:07:18 CET 2024: Client Piotr Burger has been removed
+Thu Jan 11 16:07:19 CET 2024: Client Michał Zając has been removed
+Thu Jan 11 16:07:23 CET 2024: Could not add client
+Thu Jan 11 16:07:27 CET 2024: Client 123 123 has been added
+Thu Jan 11 16:07:39 CET 2024: Client 123 123 has been added
+Thu Jan 11 16:07:43 CET 2024: Client 123 123 has been removed
+Thu Jan 11 16:07:45 CET 2024: Client 123 123 has been removed
+Thu Jan 11 16:16:21 CET 2024: User pracownik1 logged in
+Thu Jan 11 16:16:24 CET 2024: ClientAndrzej Nowak removed successfully
+Thu Jan 11 16:16:24 CET 2024: ClientJanina Kowalska removed successfully
+Thu Jan 11 16:16:25 CET 2024: ClientBarbara Wiśniewska removed successfully
+Thu Jan 11 16:16:31 CET 2024: Client 123 123 has been added
+Thu Jan 11 16:16:37 CET 2024: Client123 123 removed successfully
+Thu Jan 11 16:17:39 CET 2024: User pracownik1 logged in
+Thu Jan 11 16:17:43 CET 2024: Client 123 123 has been added
+Thu Jan 11 16:17:49 CET 2024: Client123 123 removed successfully
+Thu Jan 11 16:17:50 CET 2024: ClientKrzysztof Kowalczyk removed successfully
+Thu Jan 11 16:17:50 CET 2024: ClientBarbara Wiśniewska removed successfully
+Thu Jan 11 16:17:51 CET 2024: ClientAndrzej Nowak removed successfully
+Thu Jan 11 16:17:51 CET 2024: ClientZofia Lewandowska removed successfully
+Thu Jan 11 16:17:51 CET 2024: ClientJanina Kowalska removed successfully
+Thu Jan 11 16:18:01 CET 2024: Client 123 123 has been added
+Thu Jan 11 16:21:59 CET 2024: User pracownik1 logged in
+Thu Jan 11 16:22:03 CET 2024: ClientBarbara Wiśniewska removed successfully
+Thu Jan 11 16:22:03 CET 2024: ClientKrzysztof Kowalczyk removed successfully
+Thu Jan 11 16:22:03 CET 2024: ClientZofia Lewandowska removed successfully
+Thu Jan 11 16:22:04 CET 2024: ClientPiotr Konsik removed successfully
+Thu Jan 11 16:22:04 CET 2024: ClientAnna Jankowska removed successfully
+Thu Jan 11 16:22:05 CET 2024: ClientPiotr Gryf removed successfully
+Thu Jan 11 16:22:13 CET 2024: Client 123 123 has been added
+Thu Jan 11 16:22:17 CET 2024: ClientTeresa Adamczyk removed successfully
+Thu Jan 11 16:22:18 CET 2024: ClientAndrzej Nowak removed successfully
+Thu Jan 11 16:22:19 CET 2024: Client123 123 removed successfully
+Thu Jan 11 16:22:19 CET 2024: ClientJanina Kowalska removed successfully
+Thu Jan 11 16:22:26 CET 2024: Client 123 123 has been added
+Thu Jan 11 16:22:35 CET 2024: Client zxc zxc has been added
+Thu Jan 11 16:24:39 CET 2024: User pracownik1 logged in
+Thu Jan 11 16:24:45 CET 2024: CarMercedes C-Class 789 removed successfully
+Thu Jan 11 16:24:53 CET 2024: Car 123 123 1231 added
+Thu Jan 11 16:25:03 CET 2024: Car 123 123 123 added
+Thu Jan 11 16:25:35 CET 2024: Client 123 1231 has been added
+Thu Jan 11 16:25:43 CET 2024: ClientKrzysztof Kowalczyk removed successfully
+Thu Jan 11 16:25:44 CET 2024: Client123 1231 removed successfully
+Thu Jan 11 16:25:45 CET 2024: ClientBarbara Wiśniewska removed successfully
+Thu Jan 11 16:25:46 CET 2024: ClientAndrzej Nowak removed successfully
+Thu Jan 11 16:25:46 CET 2024: ClientZofia Lewandowska removed successfully
+Thu Jan 11 16:32:19 CET 2024: User pracownik1 logged in
+Thu Jan 11 16:32:28 CET 2024: Car 123 123 123 added
+Thu Jan 11 16:32:31 CET 2024: CarHyundai Elantra 505 removed successfully
+Thu Jan 11 16:32:39 CET 2024: Car 123 123 123 added
+Thu Jan 11 16:32:41 CET 2024: Car123 123 123 removed successfully
+Thu Jan 11 16:32:41 CET 2024: Car123 123 123 removed successfully
+Thu Jan 11 16:39:24 CET 2024: User pracownik1 logged in
+Thu Jan 11 16:39:29 CET 2024: ClientAnna Jankowska removed successfully
+Thu Jan 11 16:39:30 CET 2024: ClientPiotr Gryf removed successfully
+Thu Jan 11 16:39:30 CET 2024: ClientTeresa Adamczyk removed successfully
+Thu Jan 11 16:39:30 CET 2024: ClientTomasz Wojciechowski removed successfully
+Thu Jan 11 16:39:35 CET 2024: Client 123 123 has been added
+Thu Jan 11 16:39:42 CET 2024: Client zxc zxc has been added
+Thu Jan 11 16:39:45 CET 2024: Client123 123 removed successfully
+Thu Jan 11 16:39:46 CET 2024: Clientzxc zxc removed successfully
+Thu Jan 11 16:39:46 CET 2024: ClientPiotr Konsik removed successfully
+Thu Jan 11 16:39:47 CET 2024: ClientZofia Lewandowska removed successfully
+Thu Jan 11 16:39:47 CET 2024: ClientPiotr Burger removed successfully
+Thu Jan 11 16:39:47 CET 2024: ClientKrzysztof Kowalczyk removed successfully
+Thu Jan 11 16:39:48 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 16:39:50 CET 2024: User list serialized to file usersList.txt
+Thu Jan 11 16:39:52 CET 2024: User list serialized to file usersList.txt
+Thu Jan 11 17:03:06 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:03:11 CET 2024: CarAlfa Romeo Giulietta KBC98368 removed successfully
+Thu Jan 11 17:03:11 CET 2024: CarHonda Civic KR42069 removed successfully
+Thu Jan 11 17:04:15 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:04:18 CET 2024: CarBMW X3 456 removed successfully
+Thu Jan 11 17:04:25 CET 2024: Car 123 123 123 added
+Thu Jan 11 17:08:42 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:08:47 CET 2024: CarHonda Civic KR42069 removed successfully
+Thu Jan 11 17:08:55 CET 2024: Car 123 123 123 added
+Thu Jan 11 17:08:58 CET 2024: CarHyundai Elantra 505 removed successfully
+Thu Jan 11 17:21:40 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:24:49 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:27:31 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:27:35 CET 2024: ClientAnna Jankowska removed successfully
+Thu Jan 11 17:27:35 CET 2024: ClientPiotr Konsik removed successfully
+Thu Jan 11 17:27:35 CET 2024: ClientZofia Lewandowska removed successfully
+Thu Jan 11 17:27:36 CET 2024: ClientKrzysztof Kowalczyk removed successfully
+Thu Jan 11 17:27:40 CET 2024: Client 123 123 has been added
+Thu Jan 11 17:27:46 CET 2024: Client123 123 removed successfully
+Thu Jan 11 17:27:46 CET 2024: Client123 123 removed successfully
+Thu Jan 11 17:27:53 CET 2024: Client 123 123 has been added
+Thu Jan 11 17:30:28 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:30:33 CET 2024: Client 123 123 has been added
+Thu Jan 11 17:30:39 CET 2024: Client123 123 removed successfully
+Thu Jan 11 17:30:40 CET 2024: ClientPiotr Burger removed successfully
+Thu Jan 11 17:30:41 CET 2024: ClientAnna Jankowska removed successfully
+Thu Jan 11 17:30:41 CET 2024: ClientPiotr Gryf removed successfully
+Thu Jan 11 17:30:42 CET 2024: ClientPiotr Konsik removed successfully
+Thu Jan 11 17:30:42 CET 2024: ClientKrzysztof Kowalczyk removed successfully
+Thu Jan 11 17:30:43 CET 2024: ClientBarbara Wiśniewska removed successfully
+Thu Jan 11 17:30:44 CET 2024: ClientJanina Kowalska removed successfully
+Thu Jan 11 17:30:52 CET 2024: Client 123 123 has been added
+Thu Jan 11 17:30:54 CET 2024: Client123 123 removed successfully
+Thu Jan 11 17:37:20 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:37:54 CET 2024: ClientJanina Kowalska removed successfully
+Thu Jan 11 17:37:56 CET 2024: ClientBarbara Wiśniewska removed successfully
+Thu Jan 11 17:41:39 CET 2024: User pracownik1 logged in
+Thu Jan 11 17:42:30 CET 2024: ClientKrzysztof Kowalczyk removed successfully
+Thu Jan 11 18:03:31 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:03:36 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 18:03:37 CET 2024: User list serialized to file usersList.txt
+Thu Jan 11 18:03:39 CET 2024: User pracownik1 logged out
+Thu Jan 11 18:03:45 CET 2024: User pracownik2 logged in
+Thu Jan 11 18:04:02 CET 2024: Leased car Honda Civic Silver KR42069 to Janina Kowalska
+Thu Jan 11 18:04:11 CET 2024: Leased car Alfa Romeo Giulietta Red KBC98368 to Barbara Wiśniewska
+Thu Jan 11 18:04:15 CET 2024: Leased car BMW X3 White 456 to Monika Kowal
+Thu Jan 11 18:04:17 CET 2024: Leased car Ford Fiesta Yellow 202 to Monika Kowal
+Thu Jan 11 18:04:19 CET 2024: Leased car Nissan Altima Green 404 to Monika Kowal
+Thu Jan 11 18:04:22 CET 2024: Leased car Toyota Camry Black 303 to Monika Kowal
+Thu Jan 11 18:05:43 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:05:48 CET 2024: Leased car BMW X3 White 456 to Zofia Lewandowska
+Thu Jan 11 18:05:49 CET 2024: Leased car Mercedes C-Class Blue 789 to Monika Kowal
+Thu Jan 11 18:05:52 CET 2024: Leased car Toyota Camry Black 303 to Monika Kowal
+Thu Jan 11 18:05:53 CET 2024: Leased car Ford Fiesta Yellow 202 to Monika Kowal
+Thu Jan 11 18:05:55 CET 2024: Leased car Nissan Altima Green 404 to Monika Kowal
+Thu Jan 11 18:06:56 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:07:00 CET 2024: Leased car BMW X3 White 456 to Monika Kowal
+Thu Jan 11 18:07:02 CET 2024: Leased car Toyota Camry Black 303 to Michał Zając
+Thu Jan 11 18:07:03 CET 2024: Leased car Nissan Altima Green 404 to Tomasz Wojciechowski
+Thu Jan 11 18:07:05 CET 2024: Leased car Hyundai Elantra Orange 505 to Teresa Adamczyk
+Thu Jan 11 18:07:15 CET 2024: Leased car Mercedes C-Class Blue 789 to Piotr Burger
+Thu Jan 11 18:07:17 CET 2024: Leased car Ford Fiesta Yellow 202 to Piotr Gryf
+Thu Jan 11 18:07:18 CET 2024: Leased car Honda Civic Silver KR42069 to Anna Jankowska
+Thu Jan 11 18:07:19 CET 2024: Leased car Volkswagen Passat Gray 101 to Krzysztof Kowalczyk
+Thu Jan 11 18:07:20 CET 2024: Leased car Alfa Romeo Giulietta Red KBC98368 to Barbara Wiśniewska
+Thu Jan 11 18:07:21 CET 2024: Leased car Audi A4 Black 123 to Andrzej Nowak
+Thu Jan 11 18:07:32 CET 2024: Car 123 123 123 added
+Thu Jan 11 18:07:39 CET 2024: Leased car 123 123 123 123 to Piotr Konsik
+Thu Jan 11 18:07:41 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 18:10:16 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:11:08 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:12:13 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:12:56 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:14:45 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:16:11 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:17:36 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:18:26 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:19:04 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:21:24 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:21:28 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 18:22:52 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:22:57 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 18:23:01 CET 2024: User list serialized to file usersList.txt
+Thu Jan 11 18:25:43 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:25:50 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 18:28:27 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:28:42 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 18:28:45 CET 2024: User list serialized to file usersList.txt
+Thu Jan 11 18:28:47 CET 2024: User pracownik1 logged out
+Thu Jan 11 18:29:39 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:29:46 CET 2024: User pracownik1 logged out
+Thu Jan 11 18:33:11 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:33:32 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 18:34:47 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:38:11 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:39:20 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:40:07 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:41:59 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:42:54 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:43:23 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:47:24 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:48:11 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:48:20 CET 2024: Client list downloaded to file clientsList.txt
+Thu Jan 11 18:48:25 CET 2024: User list serialized to file usersList.txt
+Thu Jan 11 18:48:54 CET 2024: Couldn't add car   
+Thu Jan 11 18:49:06 CET 2024: Car   removed successfully
+Thu Jan 11 18:49:17 CET 2024: Couldn't add car   
+Thu Jan 11 18:49:22 CET 2024: Car   removed successfully
+Thu Jan 11 18:50:16 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:50:22 CET 2024: Couldn't add car   
+Thu Jan 11 18:50:27 CET 2024: Could not add client
+Thu Jan 11 18:50:30 CET 2024: Client  removed successfully
+Thu Jan 11 18:51:02 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:51:08 CET 2024: Could not add client
+Thu Jan 11 18:51:28 CET 2024: Leased car Honda Civic Silver KR42069 to Krzysztof Kowalczyk
+Thu Jan 11 18:53:29 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:53:32 CET 2024: Couldn't add car   
+Thu Jan 11 18:53:41 CET 2024: Car 123 123 123 added
+Thu Jan 11 18:54:17 CET 2024: User pracownik1 logged in
+Thu Jan 11 18:54:20 CET 2024: Couldn't add car   
+Thu Jan 11 18:54:27 CET 2024: Car 123 123 123 added
+Thu Jan 11 18:54:35 CET 2024: Car123 123 123 removed successfully
+Thu Jan 11 18:54:46 CET 2024: Leased car BMW X3 White 456 to Piotr Konsik
+Thu Jan 11 18:54:57 CET 2024: Client list downloaded to file clientsList.txt

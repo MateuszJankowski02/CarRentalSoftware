@@ -1,5 +1,7 @@
 package GUI;
 
+import resources.User;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -15,6 +17,11 @@ public class LoginPanel extends JPanel{
         // Create labels
         JLabel loginLabel = new JLabel("Login:");
         JLabel passwordLabel = new JLabel("Password:");
+
+        loginLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        passwordLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+
+        setBackground(new Color(173, 214, 230));
 
         // Create a button
         loginButton = new JButton("Login");
@@ -54,9 +61,6 @@ public class LoginPanel extends JPanel{
         constraints.gridy++;
         add(loginButton, constraints);
 
-        // testing purposes
-        passwordField.setText("pracownik1");
-        loginField.setText("pracownik1");
 
         setBorder(new EmptyBorder(80, 80, 80, 80));
 

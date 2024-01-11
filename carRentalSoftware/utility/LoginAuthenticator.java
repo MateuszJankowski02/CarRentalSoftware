@@ -1,4 +1,4 @@
-package authentication;
+package utility;
 
 import resources.User;
 import java.util.ArrayList;
@@ -14,6 +14,7 @@ interface Authenticator {
 public class LoginAuthenticator implements Authenticator{
 
         public ArrayList<User> baseOfUsers;
+        public static User loggedUser = null;
 
         @Override
         public void selectBaseOfUsers(ArrayList<User> users) {
@@ -29,6 +30,7 @@ public class LoginAuthenticator implements Authenticator{
             for(User user : baseOfUsers) {
                 if(user.getLogin().equals(login) && user.getPassword().equals(password)) {
                     user.setIsLoggedIn(true);
+                    loggedUser = user;
                     System.out.println("resources.User " + user.getFirstName() + " " + user.getLastName() + " is logged in");
                     return true;
                 }
@@ -46,12 +48,17 @@ public class LoginAuthenticator implements Authenticator{
             for(User user : baseOfUsers) {
                 if(user.getLogin().equals(login) && user.getPassword().equals(password)) {
                     user.setIsLoggedIn(false);
+                    loggedUser = null;
                     System.out.println("resources.User " + user.getFirstName() + " " + user.getLastName() + " is logged out");
                     return true;
                 }
             }
             System.out.println("resources.User with login " + login + " and password " + password + " is not found");
             return false;
+        }
+
+        public static User getLoggedUser() {
+            return loggedUser;
         }
 
 }

@@ -8,12 +8,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class RemoveCar extends JPanel {
+public class LeaseCarCars extends JPanel {
 
     static GridBagConstraints constraints = new GridBagConstraints();
     private static String message;
 
-    RemoveCar(){
+    LeaseCarCars(LeaseCar leaseCar){
 
         setBackground(new Color(173, 214, 230));
 
@@ -29,9 +29,9 @@ public class RemoveCar extends JPanel {
 
         setLayout(new GridBagLayout());
 
-        refreshCars(this);
+        refreshCars(this, leaseCar);
     }
-    public void refreshCars(JPanel panel){
+    public static void refreshCars(JPanel panel, LeaseCar leaseCarPanel){
         panel.removeAll();
         panel.repaint();
         panel.revalidate();
@@ -52,7 +52,7 @@ public class RemoveCar extends JPanel {
         constraints.gridwidth = 1;
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.anchor = GridBagConstraints.CENTER;
-        removeCarInset(constraints);
+        leaseCarInset(constraints);
 
         panel.add(brandLabel, constraints);
 
@@ -68,29 +68,21 @@ public class RemoveCar extends JPanel {
         constraints.gridx = 0;
 
         for (NotLeasedCar car : NotLeasedCar.NotLeasedCars.getCars()) {
-            addCarToPanel(panel, car);
+            addCarToPanel(panel, leaseCarPanel, car);
         }
     }
-    public static void addCarToPanel(JPanel panel, NotLeasedCar car){
+    public static void addCarToPanel(JPanel panel, LeaseCar leaseCarPanel, NotLeasedCar car){
         JLabel brand = new JLabel(car.getBrand());
         JLabel model = new JLabel(car.getModel());
         JLabel color = new JLabel(car.getColor());
         JLabel registrationNumber = new JLabel(car.getRegistrationNumber());
-        JButton removeButton = new JButton("Remove");
+        JButton leaseButton = new JButton("Lease");
 
-        removeButton.addActionListener(new ActionListener() {
+        leaseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NotLeasedCar.NotLeasedCars.removeCar(car);
-                message = "Car" + car.getBrand() + " " + car.getModel() + " " + car.getRegistrationNumber() + " removed successfully";
-                Raport.saveToFile(message);
-                panel.remove(brand);
-                panel.remove(model);
-                panel.remove(color);
-                panel.remove(registrationNumber);
-                panel.remove(removeButton);
-                panel.repaint();
-                panel.revalidate();
+                leaseCarPanel.setCarToLease(car);
+                leaseCarPanel.showLeaseCarClients();
             }
         });
 
@@ -102,11 +94,11 @@ public class RemoveCar extends JPanel {
         constraints.gridx++;
         panel.add(registrationNumber, constraints);
         constraints.gridx++;
-        panel.add(removeButton, constraints);
+        panel.add(leaseButton, constraints);
         constraints.gridy++;
         constraints.gridx = 0;
     }
-    public static void removeCarInset(GridBagConstraints constraints){
+    public static void leaseCarInset(GridBagConstraints constraints){
         constraints.insets = new Insets(0, 30, 20, 30);
     }
 }

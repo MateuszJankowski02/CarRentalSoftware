@@ -1,6 +1,7 @@
 package GUI;
 
 import resources.NotLeasedCar;
+import utility.Raport;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -8,65 +9,94 @@ import java.awt.*;
 
 public class AddCar extends JPanel {
 
+    static String message;
+
     AddCar(RemoveCar removeCar){
+
+        setBackground(new Color(173, 214, 230));
 
         JLabel brandLabel = new JLabel("Brand:");
         JTextField brand = new JTextField();
-        brandLabel.setPreferredSize(new Dimension(100, 30));
+        //brandLabel.setPreferredSize(new Dimension(100, 30));
         brand.setPreferredSize(new Dimension(150, 30));
 
         JLabel modelLabel = new JLabel("Model:");
         JTextField model = new JTextField();
-        modelLabel.setPreferredSize(new Dimension(100, 30));
+        //modelLabel.setPreferredSize(new Dimension(100, 30));
         model.setPreferredSize(new Dimension(150, 30));
 
         JLabel colorLabel = new JLabel("Color:");
         JTextField color = new JTextField();
-        colorLabel.setPreferredSize(new Dimension(100, 30));
+        //colorLabel.setPreferredSize(new Dimension(100, 30));
         color.setPreferredSize(new Dimension(150, 30));
 
         JLabel registrationNumberLabel = new JLabel("Registration number:");
         JTextField registrationNumber = new JTextField();
-        registrationNumberLabel.setPreferredSize(new Dimension(100, 30));
+        //registrationNumberLabel.setPreferredSize(new Dimension(100, 30));
         registrationNumber.setPreferredSize(new Dimension(150, 30));
 
         JLabel vinNumberLabel = new JLabel("VIN number:");
         JTextField vinNumber = new JTextField();
-        vinNumberLabel.setPreferredSize(new Dimension(100, 30));
+        //vinNumberLabel.setPreferredSize(new Dimension(100, 30));
         vinNumber.setPreferredSize(new Dimension(150, 30));
 
         JLabel engineNumberLabel = new JLabel("Engine number:");
         JTextField engineNumber = new JTextField();
-        engineNumberLabel.setPreferredSize(new Dimension(100, 30));
+        //engineNumberLabel.setPreferredSize(new Dimension(100, 30));
         engineNumber.setPreferredSize(new Dimension(150, 30));
 
         JLabel productionYearLabel = new JLabel("Production year:");
         JTextField productionYear = new JTextField();
-        productionYearLabel.setPreferredSize(new Dimension(100, 30));
+        //productionYearLabel.setPreferredSize(new Dimension(100, 30));
         productionYear.setPreferredSize(new Dimension(150, 30));
 
         JLabel engineCapacityLabel = new JLabel("Engine capacity:");
         JTextField engineCapacity = new JTextField();
-        engineCapacityLabel.setPreferredSize(new Dimension(100, 30));
+        //engineCapacityLabel.setPreferredSize(new Dimension(100, 30));
         engineCapacity.setPreferredSize(new Dimension(150, 30));
 
         JLabel powerLabel = new JLabel("Power:");
         JTextField power = new JTextField();
-        powerLabel.setPreferredSize(new Dimension(100, 30));
+        //powerLabel.setPreferredSize(new Dimension(100, 30));
         power.setPreferredSize(new Dimension(150, 30));
 
         JLabel fuelTypeLabel = new JLabel("Fuel type:");
         JTextField fuelType = new JTextField();
-        fuelTypeLabel.setPreferredSize(new Dimension(100, 30));
+        //fuelTypeLabel.setPreferredSize(new Dimension(100, 30));
         fuelType.setPreferredSize(new Dimension(150, 30));
 
         JLabel mileageLabel = new JLabel("Mileage:");
         JTextField mileage = new JTextField();
-        mileageLabel.setPreferredSize(new Dimension(100, 30));
+        //mileageLabel.setPreferredSize(new Dimension(100, 30));
         mileage.setPreferredSize(new Dimension(150, 30));
 
         JButton addButton = new JButton("Add car");
         addButton.setPreferredSize(new Dimension(100, 30));
+
+        Dimension labelPreferredSize = registrationNumberLabel.getPreferredSize();
+        brandLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        modelLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        colorLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        registrationNumberLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        vinNumberLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        engineNumberLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        productionYearLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        engineCapacityLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        powerLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        fuelTypeLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+        mileageLabel.setSize(new Dimension((int) labelPreferredSize.getWidth(), (int) labelPreferredSize.getHeight()));
+
+        brandLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        modelLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        colorLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        registrationNumberLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        vinNumberLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        engineNumberLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        productionYearLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        engineCapacityLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        powerLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        fuelTypeLabel.setFont(new Font("Verdana", Font.BOLD, 16));
+        mileageLabel.setFont(new Font("Verdana", Font.BOLD, 16));
 
         add(brand);
         add(model);
@@ -201,7 +231,12 @@ public class AddCar extends JPanel {
         add(mileage, constraints);
 
         // add button
+        //constraints.gridy++;
+        //add(addButton, constraints);
+        addCarInset(constraints);
+        constraints.gridx--;
         constraints.gridy++;
+        constraints.gridwidth = 2;
         add(addButton, constraints);
 
         setBorder(new EmptyBorder(20, 20, 20, 20));
@@ -210,9 +245,12 @@ public class AddCar extends JPanel {
             NotLeasedCar notLeasedCar = new NotLeasedCar(brand.getText(), model.getText(), color.getText(), registrationNumber.getText(),
                     vinNumber.getText(), engineNumber.getText(), productionYear.getText(), engineCapacity.getText(),
                     power.getText(), fuelType.getText(), mileage.getText());
-            if (NotLeasedCar.NotLeasedCars.addCar(notLeasedCar)) {
+            if (checkIfNoEmptyFields(brand, model, color, registrationNumber,
+                    vinNumber, engineNumber, productionYear, engineCapacity, power, fuelType, mileage) && NotLeasedCar.NotLeasedCars.addCar(notLeasedCar)) {
 
-                JOptionPane.showMessageDialog(null, "Car added successfully");
+                message = "Car " + brand.getText() + " " + model.getText() + " " + registrationNumber.getText() +  " added";
+                Raport.saveToFile(message);
+                JOptionPane.showMessageDialog(null, "Car " + brand.getText() + " " + model.getText() + " " + registrationNumber.getText() +  " added");
                 brand.setText("");
                 model.setText("");
                 color.setText("");
@@ -224,14 +262,24 @@ public class AddCar extends JPanel {
                 power.setText("");
                 fuelType.setText("");
                 mileage.setText("");
-                RemoveCar.addCarToPanel(removeCar, notLeasedCar, removeCar.constraints);
             } else {
-                JOptionPane.showMessageDialog(null, "Car not added");
+                message = "Couldn't add car " + brand.getText() + " " + model.getText() + " " + registrationNumber.getText();
+                Raport.saveToFile(message);
+                JOptionPane.showMessageDialog(null, "Couldn't add car. Check if all fields are filled");
             }
         });
     }
     public static void addCarInset(GridBagConstraints constraints){
         constraints.insets = new Insets(0, 30, 10, 30);
+    }
+
+    public static boolean checkIfNoEmptyFields(JTextField... textFields){
+        for (JTextField textField : textFields) {
+            if (textField.getText().isEmpty()) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }
